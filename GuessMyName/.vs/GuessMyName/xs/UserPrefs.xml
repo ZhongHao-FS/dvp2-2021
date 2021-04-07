@@ -2,25 +2,34 @@
   <MonoDevelop.Ide.ItemProperties.GuessMyName.iOS FirstBuild="True" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GuessMyName/Models/WikiAPI.cs">
     <Files>
-      <File FileName="GuessMyName/Models/WikiAPI.cs" Line="1" Column="1" />
+      <File FileName="GuessMyName/Models/WikiAPI.cs" Line="31" Column="67" />
+      <File FileName="GuessMyName/MainPage.xaml" Line="12" Column="47" />
+      <File FileName="GuessMyName/MainPage.xaml.cs" Line="24" Column="54" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GuessMyName" expanded="True">
             <Node name="GuessMyName" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+                <Node name="SdkDependencies" expanded="True" />
+              </Node>
               <Node name="Models" expanded="True">
                 <Node name="WikiAPI.cs" selected="True" />
               </Node>
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.GuessMyName FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GuessMyName.Android FirstBuild="True" PreferredExecutionTarget="Android.pixel_2_q_10_0_-_api_29" />
+  <MonoDevelop.Ide.ItemProperties.GuessMyName.Android PreferredExecutionTarget="Android.pixel_2_q_10_0_-_api_29" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
