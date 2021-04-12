@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{116DD6B3-50D0-4881-8E51-994FF6A4D393}|Default">
   <MonoDevelop.Ide.ItemProperties.GuessMyName.iOS FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GuessMyName/Models/WikiAPI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GuessMyName/MainPage.xaml.cs">
     <Files>
-      <File FileName="GuessMyName/Models/WikiAPI.cs" Line="31" Column="67" />
-      <File FileName="GuessMyName/MainPage.xaml" Line="12" Column="47" />
+      <File FileName="GuessMyName/Models/WikiAPI.cs" Line="29" Column="45" />
+      <File FileName="GuessMyName/MainPage.xaml" />
       <File FileName="GuessMyName/MainPage.xaml.cs" Line="24" Column="54" />
     </Files>
     <Pads>
@@ -15,10 +15,10 @@
                 <Node name="PackageDependencies" expanded="True" />
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
-              <Node name="Models" expanded="True">
-                <Node name="WikiAPI.cs" selected="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True">
+                <Node name="MainPage.xaml.cs" selected="True" />
               </Node>
-              <Node name="MainPage.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
