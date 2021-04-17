@@ -10,7 +10,7 @@ namespace GuessMyName
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SignUpPage();
         }
 
         protected override void OnStart()

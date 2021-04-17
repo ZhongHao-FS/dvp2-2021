@@ -1,24 +1,28 @@
 ﻿<Properties StartupConfiguration="{116DD6B3-50D0-4881-8E51-994FF6A4D393}|Default">
   <MonoDevelop.Ide.ItemProperties.GuessMyName.iOS FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GuessMyName/MainPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GuessMyName/Models/LoginViewModel.cs">
     <Files>
       <File FileName="GuessMyName/Models/WikiAPI.cs" Line="29" Column="45" />
       <File FileName="GuessMyName/MainPage.xaml" />
-      <File FileName="GuessMyName/MainPage.xaml.cs" Line="24" Column="54" />
+      <File FileName="GuessMyName/MainPage.xaml.cs" />
+      <File FileName="GuessMyName/Models/LoginViewModel.cs" Line="38" Column="23" />
+      <File FileName="GuessMyName/LoginPage.xaml" />
+      <File FileName="GuessMyName/LoginPage.xaml.cs" />
+      <File FileName="GuessMyName/SignUpPage.xaml" />
+      <File FileName="GuessMyName/SignUpPage.xaml.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GuessMyName" expanded="True">
             <Node name="GuessMyName" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-                <Node name="SdkDependencies" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="LoginViewModel.cs" selected="True" />
               </Node>
-              <Node name="Models" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True">
-                <Node name="MainPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="LoginPage.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="SignUpPage.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
