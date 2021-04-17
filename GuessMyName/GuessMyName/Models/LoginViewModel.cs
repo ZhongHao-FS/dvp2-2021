@@ -17,6 +17,7 @@ namespace GuessMyName.Models
 
         // Properties
         public Action DisplayInvalidLoginPrompt;
+        public Action DisplayInvalidSignUpPrompt;
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         public string FirstName
         {
@@ -63,20 +64,33 @@ namespace GuessMyName.Models
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
         }
-        public ICommand SubmitCommand { protected set; get; }
+        public ICommand LoginCommand { protected set; get; }
+        public ICommand SignUpCommand { protected set; get; }
 
         // Constructor
         public LoginViewModel()
         {
-            SubmitCommand = new Command(OnSubmit);
+            LoginCommand = new Command(OnLogin);
+            SignUpCommand = new Command(OnSignUp);
         }
 
-        public void OnSubmit()
+        private void OnLogin()
         {
             if (userName != "John" || password != "secret")
             {
                 DisplayInvalidLoginPrompt();
             }
+        }
+
+        private void OnSignUp()
+        {
+            if (firstName == null || lastName == null || userName == null || email == null || password == null)
+            {
+                DisplayInvalidSignUpPrompt();
+                return;
+            }
+
+            SignUpPage.RecordNewUser();
         }
     }
 }

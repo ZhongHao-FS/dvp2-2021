@@ -4,23 +4,26 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GuessMyName.LoginPage">
     <ContentPage.Content>
-       <StackLayout Orientation="Vertical" Padding="30" Spacing="40">  
-            <BoxView HeightRequest="10"/>  
-              
-            <Frame BackgroundColor="#BF043055" HasShadow="False">  
-                <StackLayout Orientation="Vertical" Spacing="10">  
-                    <Entry x:Name="UserName" Text="{Binding UserName}" Placeholder="User Name"   
-                           PlaceholderColor="White" HeightRequest="40"     
-                           TextColor="White"/>  
-                    <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
-                           PlaceholderColor="White" HeightRequest="40"   
-                           IsPassword="True"  
-                           TextColor="White"/>  
-                </StackLayout>  
-            </Frame>  
-            <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="White"  
-                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
-                    BackgroundColor="#088da5" />  
-        </StackLayout>   
+       <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+           <Frame BackgroundColor="#2196F3">
+                <Label Text="Guess Who" HorizontalTextAlignment="Center" TextColor="#FFFFFF"
+                       FontSize="Title" FontAttributes="Bold" />
+           </Frame>
+           <StackLayout Orientation="Vertical" Padding="30" >
+                <BoxView HeightRequest="20" />
+                <Entry x:Name="UserName" Text="{Binding UserName}" Placeholder="User Name"   
+                       PlaceholderColor="#607f8d" TextColor="#2196f3"/>
+                <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                       PlaceholderColor="#607f8d" IsPassword="True" TextColor="#2196f3"/>
+                <Button Command="{Binding LoginCommand}" Text="Sign In" TextColor="White"  
+                        FontAttributes="Bold" HorizontalOptions="FillAndExpand" BackgroundColor="#2196f3"
+                        CornerRadius="5" />  
+            </StackLayout>
+            <Label Text="First Time User?" FontSize="Small" HorizontalTextAlignment="Center"
+                   TextColor="#2196F3" VerticalTextAlignment="End" VerticalOptions="EndAndExpand" />
+            <Button x:Name="SignUpPageButton" Text="Sign Up" TextColor="#2196F3"
+                    FontAttributes="Bold" HorizontalOptions="FillAndExpand" BackgroundColor="#B9E6FF"
+                    VerticalOptions="EndAndExpand" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -21,11 +21,17 @@ namespace GuessMyName
             {
                 Password.Focus();
             };
-
             Password.Completed += (object sender, EventArgs e) =>
             {
-                vm.SubmitCommand.Execute(null);
+                vm.LoginCommand.Execute(null);
             };
+
+            SignUpPageButton.Clicked += SignUpPageButton_Clicked;
+        }
+
+        private void SignUpPageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopModalAsync();
         }
     }
 }

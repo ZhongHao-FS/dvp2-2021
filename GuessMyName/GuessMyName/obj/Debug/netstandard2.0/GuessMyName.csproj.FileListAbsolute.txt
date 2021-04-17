@@ -3,7 +3,9 @@
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/bin/Debug/netstandard2.0/ref/GuessMyName.dll
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/bin/Debug/netstandard2.0/GuessMyName.pdb
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/LoginPage.xaml.g.cs
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/SignUpPage.xaml.g.cs
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/GuessMyName.AssemblyInfoInputs.cache
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/GuessMyName.AssemblyInfo.cs
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/GuessMyName.csproj.CoreCompileInputs.cache
@@ -11,4 +13,3 @@
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/GuessMyName.dll
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/ref/GuessMyName.dll
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/GuessMyName.pdb
-/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/GuessMyName.csprojAssemblyReference.cache
