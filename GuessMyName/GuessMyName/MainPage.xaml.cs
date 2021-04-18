@@ -11,7 +11,7 @@ namespace GuessMyName
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        public MainPage(LoginViewModel vm)
         {
             InitializeComponent();
 

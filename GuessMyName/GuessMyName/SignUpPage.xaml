@@ -19,7 +19,7 @@
                        PlaceholderColor="#607f8d" IsPassword="True" TextColor="#2196f3"/>
                 <Entry x:Name="RetypePassword" Text="" Placeholder="Retype Password"   
                        PlaceholderColor="#607f8d" IsPassword="True" TextColor="#2196f3"/>
-                <Button Command="{Binding SignUpCommand}" Text="Sign Up" TextColor="White"  
+                <Button x:Name="SignUpButton" Text="Sign Up" TextColor="White"  
                         FontAttributes="Bold" HorizontalOptions="FillAndExpand" BackgroundColor="#2196f3"
                         CornerRadius="5" />  
             </StackLayout>
