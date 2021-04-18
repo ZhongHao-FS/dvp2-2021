@@ -20,6 +20,7 @@ namespace GuessMyName
         {
             InitializeComponent();
 
+            // User info passed in to display welcome message on the header
             headerLabel.Text = "Welcome, " + vm.UserName;
 
             searchButton.Clicked += SearchButton_Clicked;

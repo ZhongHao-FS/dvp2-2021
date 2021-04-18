@@ -27,6 +27,7 @@ namespace GuessMyName
 
             InitializeComponent();
 
+            // Load existing users
             if(File.Exists(_filePath))
             {
                 using(StreamReader reader = new StreamReader(_filePath))
@@ -74,6 +75,7 @@ namespace GuessMyName
             if (_userNames.Contains(userName.Text))
             {
                 DisplayAlert("UserName already exists", "This username is taken, please choose another one", "OK");
+                // Abort, clear the field and return to the sign up screen if any error is encountered.
                 userName.Text = null;
                 return;
             }
@@ -111,6 +113,7 @@ namespace GuessMyName
                 File.Create(_filePath);
             }
 
+            // Always add to the existing user list. The user list is created right before this in case it did not exist earlier.
             using (StreamWriter writer = File.AppendText(_filePath))
             {
                 writer.WriteLine(firstName.Text + "|" + lastName.Text + "|" + userName.Text + "|" + email.Text + "|" + password.Text);

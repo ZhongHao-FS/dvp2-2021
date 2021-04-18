@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{116DD6B3-50D0-4881-8E51-994FF6A4D393}|Default">
   <MonoDevelop.Ide.ItemProperties.GuessMyName.iOS FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GuessMyName/MainPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GuessMyName/App.xaml.cs">
     <Files>
       <File FileName="GuessMyName/Models/WikiAPI.cs" Line="2" Column="16" />
-      <File FileName="GuessMyName/MainPage.xaml" Line="8" Column="29" />
-      <File FileName="GuessMyName/MainPage.xaml.cs" Line="4" Column="38" />
+      <File FileName="GuessMyName/MainPage.xaml" />
+      <File FileName="GuessMyName/MainPage.xaml.cs" Line="23" Column="76" />
       <File FileName="GuessMyName/Models/LoginViewModel.cs" Line="4" Column="38" />
-      <File FileName="GuessMyName/LoginPage.xaml" Line="28" Column="30" />
-      <File FileName="GuessMyName/LoginPage.xaml.cs" Line="52" Column="18" />
-      <File FileName="GuessMyName/SignUpPage.xaml" Line="18" Column="93" />
-      <File FileName="GuessMyName/SignUpPage.xaml.cs" Line="21" Column="59" />
-      <File FileName="GuessMyName/App.xaml.cs" Line="21" Column="114" />
+      <File FileName="GuessMyName/LoginPage.xaml" />
+      <File FileName="GuessMyName/LoginPage.xaml.cs" Line="86" Column="85" />
+      <File FileName="GuessMyName/SignUpPage.xaml" />
+      <File FileName="GuessMyName/SignUpPage.xaml.cs" Line="116" Column="129" />
+      <File FileName="GuessMyName/App.xaml.cs" Line="24" Column="115" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,11 +18,10 @@
           <Node name="GuessMyName" expanded="True">
             <Node name="GuessMyName" expanded="True">
               <Node name="Models" expanded="True" />
-              <Node name="App.xaml" expanded="True" />
-              <Node name="LoginPage.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True">
-                <Node name="MainPage.xaml.cs" selected="True" />
+              <Node name="App.xaml" expanded="True">
+                <Node name="App.xaml.cs" selected="True" />
               </Node>
+              <Node name="LoginPage.xaml" expanded="True" />
               <Node name="SignUpPage.xaml" expanded="True" />
             </Node>
           </Node>

@@ -27,6 +27,7 @@ namespace GuessMyName
 
             userName.Completed += (object sender, EventArgs e) =>
             {
+                // Check the entered username with stored info in the txt file
                 ReadUserProfile();
                 password.Focus();
             };
@@ -57,6 +58,7 @@ namespace GuessMyName
 
                         if(userProfile[2] == userName.Text)
                         {
+                            // If the username matches, load all info for this user to get ready to pass _vm to the MainPage.
                             _vm.FirstName = userProfile[0];
                             _vm.LastName = userProfile[1];
                             _vm.Email = userProfile[3];
@@ -81,6 +83,7 @@ namespace GuessMyName
             if (string.IsNullOrWhiteSpace(userName.Text) || string.IsNullOrWhiteSpace(password.Text))
             {
                 await DisplayAlert("Error", "All fields are required, try again", "OK");
+                // Abort and return to the login screen if any error is encountered.
                 return;
             }
 
