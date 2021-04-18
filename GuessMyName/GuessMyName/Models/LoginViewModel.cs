@@ -1,8 +1,10 @@
-﻿
+﻿/* Name: Hao Zhong
+ * Course: DVP2
+ * Term: April 2021
+ * Assignment: 2.1 Sign In/Sign Up */
+
 using System;
 using System.ComponentModel;
-using System.Windows.Input;
-using Xamarin.Forms;
 
 namespace GuessMyName.Models
 {

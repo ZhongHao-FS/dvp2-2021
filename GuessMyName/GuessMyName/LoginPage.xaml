@@ -11,21 +11,21 @@
            </Frame>
            <StackLayout Orientation="Vertical" Padding="30" >
                 <BoxView HeightRequest="20" />
-                <Entry x:Name="UserName" Text="{Binding UserName}" Placeholder="User Name"   
+                <Entry x:Name="userName" Text="{Binding UserName}" Placeholder="User Name"   
                        PlaceholderColor="#607f8d" TextColor="#2196f3"/>
-                <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                <Entry x:Name="password" Text="{Binding Password}" Placeholder="Password"   
                        PlaceholderColor="#607f8d" IsPassword="True" TextColor="#2196f3"/>
-                <Button x:Name="LoginButton" Text="Sign In" TextColor="White" FontAttributes="Bold"
+                <Button x:Name="loginButton" Text="Sign In" TextColor="White" FontAttributes="Bold"
                         HorizontalOptions="FillAndExpand" BackgroundColor="#2196f3"
                         CornerRadius="5" />
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                        <Button x:Name="ForgotUserButton" Text="forgot username" TextColor="#2196F3" />
-                        <Button x:Name="ForgotPwdButton" Text="forgot password" TextColor="#2196F3" />
+                        <Button x:Name="forgotUserButton" Text="forgot username" TextColor="#2196F3" />
+                        <Button x:Name="forgotPwdButton" Text="forgot password" TextColor="#2196F3" />
                 </StackLayout>
             </StackLayout>
             <Label Text="First Time User?" FontSize="Small" HorizontalTextAlignment="Center"
                    TextColor="#2196F3" VerticalTextAlignment="End" VerticalOptions="EndAndExpand" />
-            <Button x:Name="SignUpPageButton" Text="Sign Up" TextColor="#2196F3"
+            <Button x:Name="signUpPageButton" Text="Sign Up" TextColor="#2196F3"
                     FontAttributes="Bold" HorizontalOptions="FillAndExpand" BackgroundColor="#B9E6FF"
                     VerticalOptions="EndAndExpand" />
         </StackLayout>

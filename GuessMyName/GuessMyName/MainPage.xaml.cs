@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Name: Hao Zhong
+ * Course: DVP2
+ * Term: April 2021
+ * Assignment: 2.1 Sign In/Sign Up */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -14,6 +19,8 @@ namespace GuessMyName
         public MainPage(LoginViewModel vm)
         {
             InitializeComponent();
+
+            headerLabel.Text = "Welcome, " + vm.UserName;
 
             searchButton.Clicked += SearchButton_Clicked;
         }

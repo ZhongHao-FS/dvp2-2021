@@ -5,7 +5,7 @@
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="12" CornerRadius="0">
-            <Label Text="Welcome to Guess My Name!" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+            <Label x:Name="headerLabel" Text="" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
         </Frame>
         <Entry x:Name="searchEntry" Placeholder="Name" />
         <Button x:Name="searchButton" Text="Search" />

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Name: Hao Zhong
+ * Course: DVP2
+ * Term: April 2021
+ * Assignment: 1.5 API */
+
+using System;
 using System.Net;
 using System.Threading.Tasks;
 using System.Collections.Generic;

@@ -7,25 +7,25 @@
         <StackLayout VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical" Padding="30" >
                 <BoxView HeightRequest="30" />
-                <Entry x:Name="FirstName" Text="{Binding FirstName}" Placeholder="First Name"   
+                <Entry x:Name="firstName" Text="{Binding FirstName}" Placeholder="First Name"   
                        PlaceholderColor="#607f8d" TextColor="#2196f3"/>
-                <Entry x:Name="LastName" Text="{Binding LastName}" Placeholder="Last Name"   
+                <Entry x:Name="lastName" Text="{Binding LastName}" Placeholder="Last Name"   
                        PlaceholderColor="#607f8d" TextColor="#2196f3"/> 
-                <Entry x:Name="UserName" Text="{Binding UserName}" Placeholder="User Name"   
+                <Entry x:Name="userName" Text="{Binding UserName}" Placeholder="User Name"   
                        PlaceholderColor="#607f8d" TextColor="#2196f3"/>
-                <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   
-                       PlaceholderColor="#607f8d" TextColor="#2196f3"/> 
-                <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                <Entry x:Name="email" Text="{Binding Email}" Placeholder="Email"   
+                       PlaceholderColor="#607f8d" TextColor="#2196f3" Keyboard="Email"/> 
+                <Entry x:Name="password" Text="{Binding Password}" Placeholder="Password"   
                        PlaceholderColor="#607f8d" IsPassword="True" TextColor="#2196f3"/>
-                <Entry x:Name="RetypePassword" Text="" Placeholder="Retype Password"   
+                <Entry x:Name="retypePassword" Text="" Placeholder="Retype Password"   
                        PlaceholderColor="#607f8d" IsPassword="True" TextColor="#2196f3"/>
-                <Button x:Name="SignUpButton" Text="Sign Up" TextColor="White"  
+                <Button x:Name="signUpButton" Text="Sign Up" TextColor="White"  
                         FontAttributes="Bold" HorizontalOptions="FillAndExpand" BackgroundColor="#2196f3"
                         CornerRadius="5" />  
             </StackLayout>
             <Label Text="Already have an account?" FontSize="Small" HorizontalTextAlignment="Center"
                    TextColor="#2196F3" VerticalTextAlignment="End" VerticalOptions="EndAndExpand" />
-            <Button x:Name="LoginPageButton" Text="Login" TextColor="#2196F3" FontAttributes="Bold"
+            <Button x:Name="loginPageButton" Text="Login" TextColor="#2196F3" FontAttributes="Bold"
                     HorizontalOptions="FillAndExpand" BackgroundColor="#B9E6FF"
                     VerticalOptions="EndAndExpand" />
         </StackLayout>
