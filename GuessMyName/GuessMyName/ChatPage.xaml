@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:GuessMyName.Views"
+    x:Class="GuessMyName.ChatPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ViewCellSelector x:Key="MessageTemplateSelector"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Grid RowSpacing="0" 
+           ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ListView x:Name="listView" Grid.Row="0" ItemTemplate="{StaticResource MessageTemplateSelector}" 
+                 ItemsSource="{Binding Messages}" Margin="0" HasUnevenRows="True"
+                 VerticalOptions="FillAndExpand" SeparatorColor="Transparent" FlowDirection="RightToLeft"
+                 Rotation="180" >
+            </ListView>
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="LightGray"
+                 Grid.Row="1"/>
+            <local:ChatInputBarView x:Name="chatInput" Grid.Row="2" Margin="0,0,10,0"/>
+        </Grid>
+        <Entry x:Name="searchEntry" Placeholder="Name" />
+        <Button x:Name="searchButton" Text="Search" />
+        <Label x:Name="resultLabel" Text="" Margin="20" TextColor="#000000" FontSize="Small"
+               LineHeight="2" />
+    </StackLayout>
+</ContentPage>

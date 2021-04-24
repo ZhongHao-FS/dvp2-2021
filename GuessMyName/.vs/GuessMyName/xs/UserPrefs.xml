@@ -1,23 +1,39 @@
 ﻿<Properties StartupConfiguration="{116DD6B3-50D0-4881-8E51-994FF6A4D393}|Default">
   <MonoDevelop.Ide.ItemProperties.GuessMyName.iOS FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GuessMyName/MainPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GuessMyName/Views/ChatInputBarView.xaml.cs">
     <Files>
       <File FileName="GuessMyName/Models/WikiAPI.cs" Line="2" Column="16" />
-      <File FileName="GuessMyName/MainPage.xaml" />
-      <File FileName="GuessMyName/MainPage.xaml.cs" Line="23" Column="76" />
-      <File FileName="GuessMyName/Models/LoginViewModel.cs" />
+      <File FileName="GuessMyName/MainPage.xaml" Line="13" Column="19" />
+      <File FileName="GuessMyName/MainPage.xaml.cs" Line="30" Column="58" />
+      <File FileName="GuessMyName/Models/LoginViewModel.cs" Line="1" Column="1" />
       <File FileName="GuessMyName/LoginPage.xaml" />
       <File FileName="GuessMyName/LoginPage.xaml.cs" />
       <File FileName="GuessMyName/SignUpPage.xaml" />
-      <File FileName="GuessMyName/SignUpPage.xaml.cs" />
+      <File FileName="GuessMyName/SignUpPage.xaml.cs" Line="6" Column="14" />
+      <File FileName="GuessMyName/Models/MessageModel.cs" Line="4" Column="28" />
+      <File FileName="GuessMyName/Models/ChatViewModel.cs" Line="24" Column="46" />
+      <File FileName="GuessMyName/Views/IncomingViewCell.xaml" Line="10" Column="1" />
+      <File FileName="GuessMyName/Views/IncomingViewCell.xaml.cs" Line="5" Column="1" />
+      <File FileName="GuessMyName/Views/OutgoingViewCell.xaml" Line="7" Column="19" />
+      <File FileName="GuessMyName/Views/OutgoingViewCell.xaml.cs" Line="3" Column="20" />
+      <File FileName="GuessMyName/Views/ViewCellSelector.cs" Line="4" Column="28" />
+      <File FileName="GuessMyName/ChatPage.xaml" Line="26" Column="88" />
+      <File FileName="GuessMyName/ChatPage.xaml.cs" Line="8" Column="26" />
+      <File FileName="GuessMyName/Views/ChatInputBarView.xaml" Line="23" Column="16" />
+      <File FileName="GuessMyName/Views/ChatInputBarView.xaml.cs" Line="17" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GuessMyName" expanded="True">
-            <Node name="GuessMyName" expanded="True" selected="True">
+            <Node name="GuessMyName" expanded="True">
               <Node name="Models" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="ChatInputBarView.xaml" expanded="True">
+                  <Node name="ChatInputBarView.xaml.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="ChatPage.xaml" expanded="True" />
             </Node>
           </Node>
         </State>

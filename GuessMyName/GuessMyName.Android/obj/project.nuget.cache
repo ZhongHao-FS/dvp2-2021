@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1cdYV3/rao421C5p9BXGUVlbghHK3zOEBb7WsxESFjhqkmMuW1jNGL74MD6lo6MV8hNcDkzPALP8BSWVZRPdxw==",
+  "dgSpecHash": "upcpAffDn8k6VAVUUbeN1HQobYJ7CWEpWx+ZXj/xR7cuPSFerCD5S4Z2bXyd6EHEQQtXlf6j/zvEZWQ5TJKHCg==",
   "success": true,
   "projectFilePath": "/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/GuessMyName.Android.csproj",
   "expectedPackageFiles": [
+    "/Users/hao/.nuget/packages/fody/6.4.0/fody.6.4.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/hao/.nuget/packages/propertychanged.fody/3.3.3/propertychanged.fody.3.3.3.nupkg.sha512",
     "/Users/hao/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/xamarin.androidx.activity/1.1.0.5/xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "/Users/hao/.nuget/packages/xamarin.androidx.annotation/1.1.0.8/xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",

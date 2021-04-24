@@ -16,20 +16,23 @@ namespace GuessMyName
 {
     public partial class MainPage : ContentPage
     {
+        // Property
+        public static LoginViewModel Player1 { get; set; }
+
         public MainPage(LoginViewModel vm)
         {
             InitializeComponent();
 
             // User info passed in to display welcome message on the header
             headerLabel.Text = "Welcome, " + vm.UserName;
+            Player1 = vm;
 
             searchButton.Clicked += SearchButton_Clicked;
         }
 
-        async void SearchButton_Clicked(object sender, EventArgs e)
+        private void SearchButton_Clicked(object sender, EventArgs e)
         {
-            WikiAPI wiki = new WikiAPI(searchEntry.Text);
-            resultLabel.Text = await wiki.GetIntro();
+            
         }
     }
 }
