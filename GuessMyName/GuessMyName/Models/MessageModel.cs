@@ -11,7 +11,6 @@ namespace GuessMyName.Models
         // Properties
         public string Text { get; set; }
         public string Sender { get; set; }
-        public string Receiver { get; set; }
         public DateTime Time { get; set; }
     }
 }

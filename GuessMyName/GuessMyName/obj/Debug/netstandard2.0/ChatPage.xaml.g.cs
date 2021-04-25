@@ -23,9 +23,6 @@ namespace GuessMyName {
         private global::GuessMyName.Views.ChatInputBarView chatInput;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Entry searchEntry;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button searchButton;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -36,7 +33,6 @@ namespace GuessMyName {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ChatPage));
             listView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "listView");
             chatInput = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::GuessMyName.Views.ChatInputBarView>(this, "chatInput");
-            searchEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "searchEntry");
             searchButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "searchButton");
             resultLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "resultLabel");
         }

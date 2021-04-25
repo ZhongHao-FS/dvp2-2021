@@ -2,14 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GuessMyName.MainPage">
-
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="12" CornerRadius="0">
             <Label x:Name="headerLabel" Text="" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
         </Frame>
-        <Entry x:Name="searchEntry" Placeholder="Name" />
-        <Button x:Name="searchButton" Text="Search" />
-        <Label x:Name="resultLabel" Text="" Margin="20" TextColor="#000000" FontSize="Small" LineHeight="2" />
+        <Label x:Name="promptLabel" Text="" Margin="20" TextColor="#2196f3" FontSize="Medium" />
+        <Entry x:Name="nameEntry" Placeholder="" />
+        <Button x:Name="confirmButton" Text="Confirm" />
+        <Image Source="noob.png" HorizontalOptions="Center" HeightRequest="50" />
     </StackLayout>
-
 </ContentPage>

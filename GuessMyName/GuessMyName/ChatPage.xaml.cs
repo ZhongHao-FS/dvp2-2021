@@ -18,6 +18,7 @@ namespace GuessMyName
             this.BindingContext = new ChatViewModel();
 
             listView.ItemTapped += ListView_ItemTapped;
+            searchButton.Text = $"Search {MainPage.NameToGuess} on Wikipedia";
             searchButton.Clicked += SearchButton_Clicked;
         }
 
@@ -28,7 +29,7 @@ namespace GuessMyName
 
         async void SearchButton_Clicked(object sender, EventArgs e)
         {
-            WikiAPI wiki = new WikiAPI(searchEntry.Text);
+            WikiAPI wiki = new WikiAPI(MainPage.NameToGuess);
             resultLabel.Text = await wiki.GetIntro();
         }
     }

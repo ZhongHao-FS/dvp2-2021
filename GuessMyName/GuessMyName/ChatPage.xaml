@@ -25,8 +25,7 @@
                  Grid.Row="1"/>
             <local:ChatInputBarView x:Name="chatInput" Grid.Row="2" Margin="0,0,10,0"/>
         </Grid>
-        <Entry x:Name="searchEntry" Placeholder="Name" />
-        <Button x:Name="searchButton" Text="Search" />
+        <Button x:Name="searchButton" Text="" />
         <Label x:Name="resultLabel" Text="" Margin="20" TextColor="#000000" FontSize="Small"
                LineHeight="2" />
     </StackLayout>
