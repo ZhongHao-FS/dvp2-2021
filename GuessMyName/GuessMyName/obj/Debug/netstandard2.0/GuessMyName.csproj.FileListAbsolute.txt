@@ -2,7 +2,6 @@
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/bin/Debug/netstandard2.0/GuessMyName.dll
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/bin/Debug/netstandard2.0/ref/GuessMyName.dll
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/bin/Debug/netstandard2.0/GuessMyName.pdb
-/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/GuessMyName.csprojAssemblyReference.cache
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/ChatPage.xaml.g.cs
 /Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName/obj/Debug/netstandard2.0/LoginPage.xaml.g.cs

@@ -23,14 +23,22 @@ namespace GuessMyName.Models
         public ChatViewModel()
         {
             string filePath = Path.Combine(App.FolderPath, "ChatLog.txt");
-            using (StreamReader reader = new StreamReader(filePath))
+            if(File.Exists(filePath))
             {
-                while (reader.Peek() > -1)
+                using (StreamReader reader = new StreamReader(filePath))
                 {
-                    string[] chatLog = reader.ReadLine().Split('|');
-                    MessageModel chat = new MessageModel() { Text = chatLog[0], Sender = chatLog[1], Time = DateTime.Parse(chatLog[2]) };
-                    Messages.Insert(0, chat);
+                    while (reader.Peek() > -1)
+                    {
+                        string[] chatLog = reader.ReadLine().Split('|');
+                        MessageModel chat = new MessageModel() { Text = chatLog[0], Sender = chatLog[1], Time = DateTime.Parse(chatLog[2]) };
+                        Messages.Insert(0, chat);
+                    }
                 }
+            }
+            else
+            {
+                // Create an empty txt file for the chat if the file does not exist yet.
+                using (File.Create(filePath)) { }
             }
 
             OnSendCommand = new Command(() =>

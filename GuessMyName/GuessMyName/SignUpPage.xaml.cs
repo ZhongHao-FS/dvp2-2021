@@ -72,6 +72,12 @@ namespace GuessMyName
 
         private void SignUpButton_Clicked(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(firstName.Text) || string.IsNullOrWhiteSpace(lastName.Text) || string.IsNullOrWhiteSpace(userName.Text) || string.IsNullOrWhiteSpace(email.Text) || string.IsNullOrWhiteSpace(password.Text) || string.IsNullOrWhiteSpace(retypePassword.Text))
+            {
+                DisplayAlert("Error", "All fields are required, try again", "OK");
+                return;
+            }
+
             if (_userNames.Contains(userName.Text))
             {
                 DisplayAlert("UserName already exists", "This username is taken, please choose another one", "OK");
@@ -102,12 +108,6 @@ namespace GuessMyName
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(firstName.Text) || string.IsNullOrWhiteSpace(lastName.Text) || string.IsNullOrWhiteSpace(userName.Text) || string.IsNullOrWhiteSpace(email.Text) || string.IsNullOrWhiteSpace(password.Text) || string.IsNullOrWhiteSpace(retypePassword.Text))
-            {
-                DisplayAlert("Error", "All fields are required, try again", "OK");
-                return;
-            }
-
             if (!File.Exists(_filePath))
             {
                 File.Create(_filePath);
@@ -120,7 +120,7 @@ namespace GuessMyName
             }
 
             DisplayAlert("Success", "Thank you for signing up!", "OK");
-            Navigation.PushModalAsync(new MainPage(_vm));
+            Navigation.PushModalAsync(new NavigationPage(new MainPage(_vm)));
         }
 
         private void LoginPageButton_Clicked(object sender, EventArgs e)

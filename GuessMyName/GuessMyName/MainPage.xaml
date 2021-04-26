@@ -9,6 +9,6 @@
         <Label x:Name="promptLabel" Text="" Margin="20" TextColor="#2196f3" FontSize="Medium" />
         <Entry x:Name="nameEntry" Placeholder="" />
         <Button x:Name="confirmButton" Text="Confirm" />
-        <Image Source="noob.png" HorizontalOptions="Center" HeightRequest="50" />
+        <Image Source="noob.png" HorizontalOptions="Center" HeightRequest="150" />
     </StackLayout>
 </ContentPage>

@@ -4,7 +4,6 @@
  * Assignment: 2.1 Sign In/Sign Up */
 
 using System;
-using System.IO;
 using Xamarin.Forms;
 using GuessMyName.Models;
 
@@ -23,8 +22,6 @@ namespace GuessMyName
             // User info passed in to display welcome message on the header
             headerLabel.Text = "Welcome, " + vm.UserName;
             Player1 = vm;
-
-            File.Create(Path.Combine(App.FolderPath, "ChatLog.txt"));
 
             ToolbarItem signOutItem = new ToolbarItem
             {
@@ -46,7 +43,7 @@ namespace GuessMyName
         {
             NameToGuess = nameEntry.Text;
 
-            Navigation.PushModalAsync(new ChatPage());
+            Navigation.PushAsync(new ChatPage());
         }
 
         private void SignOutCommand()

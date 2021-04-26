@@ -5,6 +5,7 @@
 
 using System;
 using System.IO;
+using System.Linq;
 using System.Collections.Generic;
 using GuessMyName.Models;
 using Xamarin.Forms;
@@ -25,10 +26,9 @@ namespace GuessMyName
 
             InitializeComponent();
 
+            userName.PropertyChanged += UserName_PropertyChanged;
             userName.Completed += (object sender, EventArgs e) =>
             {
-                // Check the entered username with stored info in the txt file
-                ReadUserProfile();
                 password.Focus();
             };
             password.Completed += (object sender, EventArgs e) =>
@@ -43,6 +43,12 @@ namespace GuessMyName
             forgotPwdButton.Clicked += ForgotPwdButton_Clicked;
         }
 
+        private void UserName_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            // Check the entered username with stored info in the txt file
+            ReadUserProfile();
+        }
+
         private void ReadUserProfile()
         {
             string filePath = Path.Combine(App.FolderPath, "UserList.txt");
@@ -54,7 +60,6 @@ namespace GuessMyName
                     while (reader.Peek() > -1)
                     {
                         string[] userProfile = reader.ReadLine().Split('|');
-                        _userPwdPairs.Add(userProfile[2], userProfile[4]);
 
                         if(userProfile[2] == userName.Text)
                         {
@@ -70,12 +75,12 @@ namespace GuessMyName
 
         private void ForgotPwdButton_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Hint", "Password: Secret", "OK");
+            DisplayAlert("Hint", $"Password: {_userPwdPairs.First().Value}", "OK");
         }
 
         private void ForgotUserButton_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Hint", "Username: John", "OK");
+            DisplayAlert("Hint", $"Username: {_userPwdPairs.First().Key}", "OK");
         }
 
         async void LoginButton_Clicked(object sender, EventArgs e)
@@ -107,12 +112,35 @@ namespace GuessMyName
                 return;
             }
 
-            await Navigation.PushModalAsync(new MainPage(_vm));
+            _vm.UserName = userName.Text;
+            _vm.Password = password.Text;
+            await Navigation.PushModalAsync(new NavigationPage(new MainPage(_vm)));
         }
 
         private void SignUpPageButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PopModalAsync();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            string filePath = Path.Combine(App.FolderPath, "UserList.txt");
+
+            if (File.Exists(filePath))
+            {
+                _userPwdPairs = new Dictionary<string, string>();
+
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    while (reader.Peek() > -1)
+                    {
+                        string[] userProfile = reader.ReadLine().Split('|');
+                        _userPwdPairs.Add(userProfile[2], userProfile[4]);
+                    }
+                }
+            }
         }
     }
 }
