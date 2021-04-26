@@ -43,6 +43,12 @@ namespace GuessMyName.Models
 
             OnSendCommand = new Command(() =>
             {
+                if(Messages[0].Text.Contains(MainPage.NameToGuess))
+                {
+                    File.Delete(filePath);
+                    MessagingCenter.Send<string>(MainPage.Player1.UserName, "Correct Guess!");
+                }
+
                 if (!string.IsNullOrEmpty(TextToSend))
                 {
                     MessageModel message = new MessageModel() { Text = TextToSend, Sender = MainPage.Player1.UserName, Time = DateTime.Now };

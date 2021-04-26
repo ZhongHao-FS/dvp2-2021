@@ -20,6 +20,10 @@ namespace GuessMyName
             listView.ItemTapped += ListView_ItemTapped;
             searchButton.Text = $"Search {MainPage.NameToGuess} on Wikipedia";
             searchButton.Clicked += SearchButton_Clicked;
+
+            MessagingCenter.Subscribe<string>(this, "Correct Guess!", (sender) => {
+                Navigation.PushModalAsync(new FinishPage());
+            });
         }
 
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
