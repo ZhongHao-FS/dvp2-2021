@@ -1,10 +1,9 @@
 ﻿/* Name: Hao Zhong
  * Course: DVP2
  * Term: April 2021
- * Assignment: 2.1 Sign In/Sign Up */
+ * Assignment: 4.1 Beta */
 
 using System;
-using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using GuessMyName.Models;
@@ -17,8 +16,10 @@ namespace GuessMyName
     public partial class LoginPage : ContentPage
     {
         // Fields
-        private Dictionary<string, string> _userPwdPairs = new Dictionary<string, string>();
+        private List<LoginViewModel> _existingUsers = new List<LoginViewModel>();
+        private Dictionary<string, string> _userPwdPairs;
         private LoginViewModel _vm = new LoginViewModel();
+        private FirebaseHelper _firebase = new FirebaseHelper();
 
         public LoginPage()
         {
@@ -46,29 +47,19 @@ namespace GuessMyName
         private void UserName_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             // Check the entered username with stored info in the txt file
-            ReadUserProfile();
+            CheckUserProfile();
         }
 
-        private void ReadUserProfile()
+        private void CheckUserProfile()
         {
-            string filePath = Path.Combine(App.FolderPath, "UserList.txt");
-
-            if (File.Exists(filePath))
+            foreach (LoginViewModel user in _existingUsers)
             {
-                using (StreamReader reader = new StreamReader(filePath))
+                if (user.UserName == userName.Text)
                 {
-                    while (reader.Peek() > -1)
-                    {
-                        string[] userProfile = reader.ReadLine().Split('|');
-
-                        if(userProfile[2] == userName.Text)
-                        {
-                            // If the username matches, load all info for this user to get ready to pass _vm to the MainPage.
-                            _vm.FirstName = userProfile[0];
-                            _vm.LastName = userProfile[1];
-                            _vm.Email = userProfile[3];
-                        }
-                    }
+                    // If the username matches, load all info for this user to get ready to pass _vm to the MainPage.
+                    _vm.FirstName = user.FirstName;
+                    _vm.LastName = user.LastName;
+                    _vm.Email = user.Email;
                 }
             }
         }
@@ -100,15 +91,15 @@ namespace GuessMyName
                     await Navigation.PopModalAsync();
                 }
                 
-                userName.Text = null;
-                password.Text = null;
+                userName.Text = string.Empty;
+                password.Text = string.Empty;
                 return;
             }
             else if(_userPwdPairs[userName.Text] != password.Text)
             {
                 await DisplayAlert("Error", "Username/password combination is not correct, try again", "OK");
-                userName.Text = null;
-                password.Text = null;
+                userName.Text = string.Empty;
+                password.Text = string.Empty;
                 return;
             }
 
@@ -122,24 +113,17 @@ namespace GuessMyName
             Navigation.PopModalAsync();
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
 
-            string filePath = Path.Combine(App.FolderPath, "UserList.txt");
+            // Load existing users
+            _existingUsers = await _firebase.GetAllUsers();
+            _userPwdPairs = new Dictionary<string, string>();
 
-            if (File.Exists(filePath))
+            foreach (LoginViewModel user in _existingUsers)
             {
-                _userPwdPairs = new Dictionary<string, string>();
-
-                using (StreamReader reader = new StreamReader(filePath))
-                {
-                    while (reader.Peek() > -1)
-                    {
-                        string[] userProfile = reader.ReadLine().Split('|');
-                        _userPwdPairs.Add(userProfile[2], userProfile[4]);
-                    }
-                }
+                _userPwdPairs.Add(user.UserName, user.Password);
             }
         }
     }

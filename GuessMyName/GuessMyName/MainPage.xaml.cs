@@ -11,9 +11,11 @@ namespace GuessMyName
 {
     public partial class MainPage : ContentPage
     {
+        // Field
+        FirebaseHelper _firebase = new FirebaseHelper();
+
         // Property
-        public static LoginViewModel Player1 { get; set; }
-        public static string NameToGuess { get; set; }
+        public static LoginViewModel Me { get; set; }
 
         public MainPage(LoginViewModel vm)
         {
@@ -21,7 +23,7 @@ namespace GuessMyName
 
             // User info passed in to display welcome message on the header
             headerLabel.Text = "Welcome, " + vm.UserName;
-            Player1 = vm;
+            Me = vm;
 
             ToolbarItem signOutItem = new ToolbarItem
             {
@@ -36,20 +38,45 @@ namespace GuessMyName
             this.ToolbarItems.Add(signOutItem);
 
             promptLabel.Text = "Please enter a person's name for Player2 to guess";
+            switchButton.Text = "Join a Game";
             confirmButton.Clicked += ConfirmButton_Clicked;
+            switchButton.Clicked += SwitchButton_Clicked;
         }
 
-        private void ConfirmButton_Clicked(object sender, EventArgs e)
+        private void SwitchButton_Clicked(object sender, EventArgs e)
         {
-            NameToGuess = nameEntry.Text;
+            promptLabel.Text = "Please enter a person's name for Player1 to guess";
+            switchButton.Text = "New Game";
+            confirmButton.Clicked += JoinButton_Clicked;
+            switchButton.Clicked += SwitchBack_Clicked;
+        }
 
-            Navigation.PushAsync(new ChatPage());
+        private void SwitchBack_Clicked(object sender, EventArgs e)
+        {
+            promptLabel.Text = "Please enter a person's name for Player2 to guess";
+            switchButton.Text = "Join a Game";
+            confirmButton.Clicked += ConfirmButton_Clicked;
+            switchButton.Clicked += SwitchButton_Clicked;
+        }
+
+        async void ConfirmButton_Clicked(object sender, EventArgs e)
+        {
+            await _firebase.NewGame(Me, nameEntry.Text);
+
+            await Navigation.PushAsync(new ChatPage(nameEntry.Text));
+        }
+
+        async void JoinButton_Clicked(object sender, EventArgs e)
+        {
+            await _firebase.JoinGame(Me, nameEntry.Text);
+
+            await Navigation.PushAsync(new ChatPage(nameEntry.Text));
         }
 
         private void SignOutCommand()
         {
-            Player1 = null;
-            NameToGuess = null;
+            Me = null;
+            nameEntry.Text = string.Empty;
 
             Navigation.PopModalAsync();
         }

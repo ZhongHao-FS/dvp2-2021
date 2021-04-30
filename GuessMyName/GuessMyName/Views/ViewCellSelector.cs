@@ -29,7 +29,7 @@ namespace GuessMyName.Views
                 return null;
             }
 
-            return (messageVm.Sender == MainPage.Player1.UserName) ? outgoingDataTemplate : incomingDataTemplate;
+            return (messageVm.Sender == MainPage.Me.UserName) ? outgoingDataTemplate : incomingDataTemplate;
         }
     }
 }

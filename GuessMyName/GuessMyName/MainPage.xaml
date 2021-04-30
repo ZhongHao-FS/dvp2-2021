@@ -10,5 +10,7 @@
         <Entry x:Name="nameEntry" Placeholder="" />
         <Button x:Name="confirmButton" Text="Confirm" />
         <Image Source="noob.png" HorizontalOptions="Center" HeightRequest="150" />
+        <Button x:Name="switchButton" Text="" TextColor="#2196F3" FontAttributes="Bold"
+                HorizontalOptions="FillAndExpand" BackgroundColor="#B9E6FF" VerticalOptions="EndAndExpand" />
     </StackLayout>
 </ContentPage>

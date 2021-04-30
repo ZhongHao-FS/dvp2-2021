@@ -4,7 +4,6 @@
  * Assignment: 3.1 Alpha */
 
 using System;
-using System.Collections.Generic;
 using GuessMyName.Models;
 using Xamarin.Forms;
 
@@ -12,13 +11,17 @@ namespace GuessMyName
 {
     public partial class ChatPage : ContentPage
     {
-        public ChatPage()
+        // Field
+        private FirebaseHelper _firebase = new FirebaseHelper();
+        private string _opponentsAnswer;
+
+        public ChatPage(string answerKey)
         {
             InitializeComponent();
-            this.BindingContext = new ChatViewModel();
 
+            _opponentsAnswer = answerKey;
             listView.ItemTapped += ListView_ItemTapped;
-            searchButton.Text = $"Search {MainPage.NameToGuess} on Wikipedia";
+            searchButton.Text = $"Search {_opponentsAnswer} on Wikipedia";
             searchButton.Clicked += SearchButton_Clicked;
 
             MessagingCenter.Subscribe<string>(this, "Correct Guess!", (sender) => {
@@ -33,8 +36,15 @@ namespace GuessMyName
 
         async void SearchButton_Clicked(object sender, EventArgs e)
         {
-            WikiAPI wiki = new WikiAPI(MainPage.NameToGuess);
+            WikiAPI wiki = new WikiAPI(_opponentsAnswer);
             resultLabel.Text = await wiki.GetIntro();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            this.BindingContext = _firebase.LoadGame();
         }
     }
 }
