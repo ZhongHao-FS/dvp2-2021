@@ -4,7 +4,6 @@
  * Assignment: 3.1 Alpha */
 
 using System;
-using System.Collections.Generic;
 using GuessMyName.Models;
 using Xamarin.Forms;
 

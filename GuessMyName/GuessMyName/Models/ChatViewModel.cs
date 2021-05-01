@@ -4,7 +4,6 @@
  * Assignment: 4.1 Beta */
 
 using System;
-using System.IO;
 using System.ComponentModel;
 using System.Windows.Input;
 using System.Collections.Generic;
@@ -15,7 +14,8 @@ namespace GuessMyName.Models
 {
     public class ChatViewModel: INotifyPropertyChanged
     {
-        // Field
+        // Fields
+        private FirebaseHelper _firebase = new FirebaseHelper();
         private Dictionary<string, LoginViewModel> _answerKeys = new Dictionary<string, LoginViewModel>();
 
         // Properties
@@ -46,29 +46,32 @@ namespace GuessMyName.Models
         // Constructor
         public ChatViewModel()
         {
-            
-
             OnSendCommand = new Command(() =>
             {
-                if(Messages[0].Text.Contains(MainPage.NameToGuess))
+                if(Messages[0].Text.Contains(Answer1))
                 {
-                    File.Delete(filePath);
-                    MessagingCenter.Send<string>(MainPage.Me.UserName, "Correct Guess!");
+                    MessagingCenter.Send<LoginViewModel, string>(Player1, "Correct Guess!", Answer1);
+                }
+                if (Messages[0].Text.Contains(Answer2))
+                {
+                    MessagingCenter.Send<LoginViewModel, string>(Player2, "Correct Guess!", Answer2);
                 }
 
-                if (!string.IsNullOrEmpty(TextToSend))
-                {
-                    MessageModel message = new MessageModel() { Text = TextToSend, Sender = MainPage.Me.UserName, Time = DateTime.Now };
-                    Messages.Insert(0, message);
-
-                    using (StreamWriter writer = File.AppendText(filePath))
-                    {
-                        writer.WriteLine(message.Text + "|" + message.Sender + "|" + message.Time);
-                    }
-
-                    TextToSend = string.Empty;
-                }
+                SendText();
             });
+        }
+
+        async void SendText()
+        {
+            if (!string.IsNullOrEmpty(TextToSend))
+            {
+                MessageModel message = new MessageModel() { Text = TextToSend, Sender = MainPage.Me.UserName, Time = DateTime.Now };
+                Messages.Insert(0, message);
+
+                await _firebase.SendMessage(TextToSend);
+
+                TextToSend = string.Empty;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

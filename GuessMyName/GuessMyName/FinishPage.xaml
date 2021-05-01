@@ -4,10 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GuessMyName.FinishPage">
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
-        <Label Text="Congratulations!" HorizontalOptions="Center" HorizontalTextAlignment="Center"
+        <Label x:Name="firstLabel" Text="" HorizontalOptions="Center" HorizontalTextAlignment="Center"
                FontSize="Medium" TextColor="#2196F3" />
-        <Label Text="Your guess is correct!" HorizontalOptions="Center" HorizontalTextAlignment="Center"
+        <Label x:Name="secondLabel" Text="" HorizontalOptions="Center" HorizontalTextAlignment="Center"
                FontSize="Medium" TextColor="#2196F3" />
+        <Image x:Name="resultImage" Source="" HeightRequest="200" />
         <Button x:Name="mainButton" Text="Main Menu" HorizontalOptions="CenterAndExpand"
                 TextColor="#FFFFFF" BackgroundColor="#83B459" />
         <Button x:Name="logoutButton" Text="Sign Out" HorizontalOptions="Center"

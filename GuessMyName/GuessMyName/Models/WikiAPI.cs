@@ -15,6 +15,13 @@ namespace GuessMyName.Models
     {
         WebClient apiConnection = new WebClient();
         string startAPI = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exsentences=3&explaintext&titles=";
+        string imageAPI
+        {
+            get
+            {
+                return "https://en.wikipedia.org/w/api.php?action=query&titles=" + keyWord + "&prop=pageimages&format=json&pithumbsize=200";
+            }
+        }
         string keyWord { get; set; }
         string apiEndPoint
         {
@@ -42,6 +49,12 @@ namespace GuessMyName.Models
         private class Page
         {
             public string extract { get; set; }
+            public Thumbnail thumbnail { get; set; }
+        }
+
+        private class Thumbnail
+        {
+            public string source { get; set; }
         }
 
         public async Task<string> GetIntro()
@@ -54,6 +67,19 @@ namespace GuessMyName.Models
             }
 
             return "Infomation not found";
+        }
+
+        public async Task<Uri> GetImage()
+        {
+            string apiString = await apiConnection.DownloadStringTaskAsync(imageAPI);
+            Result data = JsonConvert.DeserializeObject<Result>(apiString);
+            foreach (Page page in data.query.pages.Values)
+            {
+                return new Uri(page.thumbnail.source);
+            }
+
+            Uri noob = new Uri("ms-appx:///drawable/noob.png");
+            return noob;
         }
     }
 }

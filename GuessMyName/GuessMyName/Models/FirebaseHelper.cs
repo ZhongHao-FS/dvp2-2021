@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
@@ -77,5 +78,17 @@ namespace GuessMyName.Models
 
             return allGames.Where(a => a.Player1 == MainPage.Me || a.Player2 == MainPage.Me).FirstOrDefault();
         }
+
+        public async Task SendMessage(string text)
+        {
+            var gameToSend = (await _firebase.Child("ChatViewModel").OnceAsync<ChatViewModel>())
+                .Where(a => a.Object.Player1 == MainPage.Me || a.Object.Player2 == MainPage.Me).FirstOrDefault();
+
+            gameToSend.Object.Messages.Add(new MessageModel() { Text = text, Sender = MainPage.Me.UserName, Time = DateTime.Now });
+
+            await _firebase.Child("ChatViewModel").Child(gameToSend.Key).PutAsync(gameToSend);
+        }
+
+     
     }
 }

@@ -11,7 +11,7 @@ namespace GuessMyName
 {
     public partial class ChatPage : ContentPage
     {
-        // Field
+        // Fields
         private FirebaseHelper _firebase = new FirebaseHelper();
         private string _opponentsAnswer;
 
@@ -24,8 +24,8 @@ namespace GuessMyName
             searchButton.Text = $"Search {_opponentsAnswer} on Wikipedia";
             searchButton.Clicked += SearchButton_Clicked;
 
-            MessagingCenter.Subscribe<string>(this, "Correct Guess!", (sender) => {
-                Navigation.PushModalAsync(new FinishPage());
+            MessagingCenter.Subscribe<LoginViewModel, string>(this, "Correct Guess!", (sender, args) => {
+                Navigation.PushModalAsync(new FinishPage(sender.UserName, args));
             });
         }
 
