@@ -2,6 +2,7 @@
 
 using Android.App;
 using Android.Content.PM;
+using Android.Gms.Common;
 using Android.Runtime;
 using Android.OS;
 

@@ -110,6 +110,9 @@ namespace GuessMyName
 
         private void SignUpPageButton_Clicked(object sender, EventArgs e)
         {
+            userName.Text = string.Empty;
+            password.Text = string.Empty;
+
             Navigation.PopModalAsync();
         }
 

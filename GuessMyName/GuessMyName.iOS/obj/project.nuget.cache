@@ -1,133 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "7oHIrPysM7uMUE3mBjSN/lqp5uhs7oO5PaiEk8OlQs1zMiP3wfRDYJZVi+lcMRLOCYjge0lfB2Z4WSw94aH77A==",
-  "success": false,
+  "dgSpecHash": "sQQ6C7w7VMomWBOmn59qm9R6zOMJMsx19ymfdNIeBr2sn4J5mmp1OddxaozI9LwnZdOROTjy8T3rJJjQvWzWAg==",
+  "success": true,
   "projectFilePath": "/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.iOS/GuessMyName.iOS.csproj",
   "expectedPackageFiles": [
     "/Users/hao/.nuget/packages/firebasedatabase.net/4.0.6/firebasedatabase.net.4.0.6.nupkg.sha512",
-    "/Users/hao/.nuget/packages/firesharp/1.1.0/firesharp.1.1.0.nupkg.sha512",
-    "/Users/hao/.nuget/packages/firesharp.serialization.jsonnet/1.1.0/firesharp.serialization.jsonnet.1.1.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/fody/6.4.0/fody.6.4.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/litedb/4.1.4/litedb.4.1.4.nupkg.sha512",
     "/Users/hao/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/hao/.nuget/packages/propertychanged.fody/3.3.3/propertychanged.fody.3.3.3.nupkg.sha512",
-    "/Users/hao/.nuget/packages/restsharp/104.4.0/restsharp.104.4.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/system.reactive/4.0.0/system.reactive.4.0.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/system.reflection.typeextensions/4.3.0/system.reflection.typeextensions.4.3.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/system.runtime.interopservices.windowsruntime/4.3.0/system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.build.download/0.10.0/xamarin.build.download.0.10.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.firebase.ios.analytics/6.9.0/xamarin.firebase.ios.analytics.6.9.0.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.firebase.ios.cloudfirestore/1.19.0/xamarin.firebase.ios.cloudfirestore.1.19.0.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.firebase.ios.core/6.10.4/xamarin.firebase.ios.core.6.10.4.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.firebase.ios.database/6.6.0/xamarin.firebase.ios.database.6.6.0.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.firebase.ios.installations/1.7.0/xamarin.firebase.ios.installations.1.7.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp.Serialization.JsonNet 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package FireSharp.Serialization.JsonNet 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp.Serialization.JsonNet",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package RestSharp 104.4.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package RestSharp 104.4.0 supports:\n  - net35 (.NETFramework,Version=v3.5)\n  - net35-client (.NETFramework,Version=v3.5,Profile=Client)\n  - net40 (.NETFramework,Version=v4.0)\n  - net40-client (.NETFramework,Version=v4.0,Profile=Client)\n  - sl4 (Silverlight,Version=v4.0)\n  - sl4-wp71 (Silverlight,Version=v4.0,Profile=WindowsPhone71)",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package FireSharp 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp.Serialization.JsonNet 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package FireSharp.Serialization.JsonNet 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp.Serialization.JsonNet",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package RestSharp 104.4.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package RestSharp 104.4.0 supports:\n  - net35 (.NETFramework,Version=v3.5)\n  - net35-client (.NETFramework,Version=v3.5,Profile=Client)\n  - net40 (.NETFramework,Version=v4.0)\n  - net40-client (.NETFramework,Version=v4.0,Profile=Client)\n  - sl4 (Silverlight,Version=v4.0)\n  - sl4-wp71 (Silverlight,Version=v4.0,Profile=WindowsPhone71)",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package FireSharp 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp.Serialization.JsonNet 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package FireSharp.Serialization.JsonNet 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp.Serialization.JsonNet",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package RestSharp 104.4.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package RestSharp 104.4.0 supports:\n  - net35 (.NETFramework,Version=v3.5)\n  - net35-client (.NETFramework,Version=v3.5,Profile=Client)\n  - net40 (.NETFramework,Version=v4.0)\n  - net40-client (.NETFramework,Version=v4.0,Profile=Client)\n  - sl4 (Silverlight,Version=v4.0)\n  - sl4-wp71 (Silverlight,Version=v4.0,Profile=WindowsPhone71)",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package FireSharp 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp.Serialization.JsonNet 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package FireSharp.Serialization.JsonNet 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp.Serialization.JsonNet",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package RestSharp 104.4.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package RestSharp 104.4.0 supports:\n  - net35 (.NETFramework,Version=v3.5)\n  - net35-client (.NETFramework,Version=v3.5,Profile=Client)\n  - net40 (.NETFramework,Version=v4.0)\n  - net40-client (.NETFramework,Version=v4.0,Profile=Client)\n  - sl4 (Silverlight,Version=v4.0)\n  - sl4-wp71 (Silverlight,Version=v4.0,Profile=WindowsPhone71)",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package FireSharp 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    }
-  ]
+  "logs": []
 }

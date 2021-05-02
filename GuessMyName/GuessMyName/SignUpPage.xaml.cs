@@ -102,6 +102,13 @@ namespace GuessMyName
 
         private void LoginPageButton_Clicked(object sender, EventArgs e)
         {
+            firstName.Text = string.Empty;
+            lastName.Text = string.Empty;
+            userName.Text = string.Empty;
+            email.Text = string.Empty;
+            password.Text = string.Empty;
+            retypePassword.Text = string.Empty;
+
             Navigation.PushModalAsync(new LoginPage());
         }
 

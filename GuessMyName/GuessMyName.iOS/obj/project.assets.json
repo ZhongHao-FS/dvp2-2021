@@ -16,20 +16,6 @@
           "lib/netstandard2.0/Firebase.dll": {}
         }
       },
-      "FireSharp/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "RestSharp": "104.4.0"
-        }
-      },
-      "FireSharp.Serialization.JsonNet/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "FireSharp": "1.1.0",
-          "Newtonsoft.Json": "6.0.4",
-          "RestSharp": "104.4.0"
-        }
-      },
       "Fody/6.4.0": {
         "type": "package",
         "build": {
@@ -72,9 +58,6 @@
         "build": {
           "build/_._": {}
         }
-      },
-      "RestSharp/104.4.0": {
-        "type": "package"
       },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
@@ -125,6 +108,13 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Build.Download/0.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Essentials/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -140,6 +130,92 @@
         },
         "runtime": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Analytics/6.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4",
+          "Xamarin.Firebase.iOS.Installations": "1.7.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Analytics.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Analytics.targets": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.CloudFirestore/1.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/6.10.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Core.targets": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Database/6.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Database.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Database.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Installations/1.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Installations.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Installations.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2012": {
@@ -269,7 +345,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FireSharp.Serialization.JsonNet": "1.1.0",
           "FirebaseDatabase.net": "4.0.6",
           "Newtonsoft.Json": "13.0.1",
           "PropertyChanged.Fody": "3.3.3",
@@ -299,20 +374,6 @@
           "lib/netstandard2.0/Firebase.dll": {}
         }
       },
-      "FireSharp/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "RestSharp": "104.4.0"
-        }
-      },
-      "FireSharp.Serialization.JsonNet/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "FireSharp": "1.1.0",
-          "Newtonsoft.Json": "6.0.4",
-          "RestSharp": "104.4.0"
-        }
-      },
       "Fody/6.4.0": {
         "type": "package",
         "build": {
@@ -355,9 +416,6 @@
         "build": {
           "build/_._": {}
         }
-      },
-      "RestSharp/104.4.0": {
-        "type": "package"
       },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
@@ -408,6 +466,13 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Build.Download/0.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Essentials/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -423,6 +488,92 @@
         },
         "runtime": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Analytics/6.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4",
+          "Xamarin.Firebase.iOS.Installations": "1.7.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Analytics.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Analytics.targets": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.CloudFirestore/1.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/6.10.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Core.targets": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Database/6.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Database.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Database.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Installations/1.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Installations.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Installations.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2012": {
@@ -552,7 +703,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FireSharp.Serialization.JsonNet": "1.1.0",
           "FirebaseDatabase.net": "4.0.6",
           "Newtonsoft.Json": "13.0.1",
           "PropertyChanged.Fody": "3.3.3",
@@ -582,20 +732,6 @@
           "lib/netstandard2.0/Firebase.dll": {}
         }
       },
-      "FireSharp/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "RestSharp": "104.4.0"
-        }
-      },
-      "FireSharp.Serialization.JsonNet/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "FireSharp": "1.1.0",
-          "Newtonsoft.Json": "6.0.4",
-          "RestSharp": "104.4.0"
-        }
-      },
       "Fody/6.4.0": {
         "type": "package",
         "build": {
@@ -638,9 +774,6 @@
         "build": {
           "build/_._": {}
         }
-      },
-      "RestSharp/104.4.0": {
-        "type": "package"
       },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
@@ -691,6 +824,13 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Build.Download/0.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Essentials/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -706,6 +846,92 @@
         },
         "runtime": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Analytics/6.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4",
+          "Xamarin.Firebase.iOS.Installations": "1.7.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Analytics.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Analytics.targets": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.CloudFirestore/1.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/6.10.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Core.targets": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Database/6.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Database.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Database.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Installations/1.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Installations.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Installations.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2012": {
@@ -835,7 +1061,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FireSharp.Serialization.JsonNet": "1.1.0",
           "FirebaseDatabase.net": "4.0.6",
           "Newtonsoft.Json": "13.0.1",
           "PropertyChanged.Fody": "3.3.3",
@@ -865,20 +1090,6 @@
           "lib/netstandard2.0/Firebase.dll": {}
         }
       },
-      "FireSharp/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "RestSharp": "104.4.0"
-        }
-      },
-      "FireSharp.Serialization.JsonNet/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "FireSharp": "1.1.0",
-          "Newtonsoft.Json": "6.0.4",
-          "RestSharp": "104.4.0"
-        }
-      },
       "Fody/6.4.0": {
         "type": "package",
         "build": {
@@ -921,9 +1132,6 @@
         "build": {
           "build/_._": {}
         }
-      },
-      "RestSharp/104.4.0": {
-        "type": "package"
       },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
@@ -974,6 +1182,13 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Build.Download/0.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Essentials/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -989,6 +1204,92 @@
         },
         "runtime": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Analytics/6.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4",
+          "Xamarin.Firebase.iOS.Installations": "1.7.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Analytics.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Analytics.targets": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.CloudFirestore/1.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/6.10.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Core.targets": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Database/6.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Database.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Database.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Installations/1.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.10.4"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Installations.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Installations.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2012": {
@@ -1118,7 +1419,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FireSharp.Serialization.JsonNet": "1.1.0",
           "FirebaseDatabase.net": "4.0.6",
           "Newtonsoft.Json": "13.0.1",
           "PropertyChanged.Fody": "3.3.3",
@@ -1146,30 +1446,6 @@
         "firebasedatabase.net.nuspec",
         "lib/netstandard2.0/Firebase.dll",
         "lib/netstandard2.0/Firebase.xml"
-      ]
-    },
-    "FireSharp/1.1.0": {
-      "sha512": "FRkskFsuZeaWm/qNHpydFlaUAU+g6PzIgeFZYixkyARXaSzsooDLFmOYKmkNPjQiXWflCI2cVgYCILZYrqa8Uw==",
-      "type": "package",
-      "path": "firesharp/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "firesharp.1.1.0.nupkg.sha512",
-        "firesharp.nuspec",
-        "lib/net45/FireSharp.dll"
-      ]
-    },
-    "FireSharp.Serialization.JsonNet/1.1.0": {
-      "sha512": "Cm2ZuswLT4iPLLpUzKa6oiCKaDv+d1Dc6WxC/xVb19prnQR5zK0jnOfpdVXIabM00SaqzP7kA9l7381FxPSVPA==",
-      "type": "package",
-      "path": "firesharp.serialization.jsonnet/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "firesharp.serialization.jsonnet.1.1.0.nupkg.sha512",
-        "firesharp.serialization.jsonnet.nuspec",
-        "lib/net45/FireSharp.Serialization.JsonNet.dll"
       ]
     },
     "Fody/6.4.0": {
@@ -1271,30 +1547,6 @@
         "propertychanged.fody.nuspec",
         "weaver/PropertyChanged.Fody.dll",
         "weaver/PropertyChanged.Fody.xcf"
-      ]
-    },
-    "RestSharp/104.4.0": {
-      "sha512": "noACbS/gvceWlZO4kaV6AepG1cTLtHRhHZftdve+lytX6AIFDk5bdzsq4FfJ2/byAH3Y04I92wlH/z95lb7UwQ==",
-      "type": "package",
-      "path": "restsharp/104.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net35-client/RestSharp.dll",
-        "lib/net35-client/RestSharp.xml",
-        "lib/net35/RestSharp.dll",
-        "lib/net35/RestSharp.xml",
-        "lib/net4-client/RestSharp.dll",
-        "lib/net4-client/RestSharp.xml",
-        "lib/net4/RestSharp.dll",
-        "lib/net4/RestSharp.xml",
-        "lib/sl4-wp71/RestSharp.WindowsPhone.dll",
-        "lib/sl4-wp71/RestSharp.WindowsPhone.xml",
-        "lib/sl4/RestSharp.Silverlight.dll",
-        "lib/sl4/RestSharp.Silverlight.xml",
-        "readme.txt",
-        "restsharp.104.4.0.nupkg.sha512",
-        "restsharp.nuspec"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -1561,6 +1813,28 @@
         "system.runtime.interopservices.windowsruntime.nuspec"
       ]
     },
+    "Xamarin.Build.Download/0.10.0": {
+      "sha512": "XiQNxx6Jox00O80sJRlZv6jXDZ/r3KC7SMwzQNQcD1gZ+vsZyJH3LcSpdJ5NiZhRrWZlTGNSbooHsOBF7lBOyQ==",
+      "type": "package",
+      "path": "xamarin.build.download/0.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICE.txt",
+        "build/Microsoft.Win32.Registry.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "buildTransitive/Microsoft.Win32.Registry.dll",
+        "buildTransitive/Newtonsoft.Json.dll",
+        "buildTransitive/Xamarin.Build.Download.dll",
+        "buildTransitive/Xamarin.Build.Download.props",
+        "buildTransitive/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.10.0.nupkg.sha512",
+        "xamarin.build.download.nuspec"
+      ]
+    },
     "Xamarin.Essentials/1.6.1": {
       "sha512": "gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
       "type": "package",
@@ -1610,6 +1884,84 @@
         "readme.txt",
         "xamarin.essentials.1.6.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.iOS.Analytics/6.9.0": {
+      "sha512": "x94iKdGY2kiwTq1isMpR+HMx7J29K8/z2pcEtd30cTjQxJOOVMyrK2i8KDwz3I2uPh/wy9NJMz4LWP1som4dKA==",
+      "type": "package",
+      "path": "xamarin.firebase.ios.analytics/6.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "build/Xamarin.Firebase.iOS.Analytics.targets",
+        "buildTransitive/Xamarin.Firebase.iOS.Analytics.targets",
+        "firebaseiosanalytics_128x128.png",
+        "lib/xamarinios10/Firebase.Analytics.dll",
+        "xamarin.firebase.ios.analytics.6.9.0.nupkg.sha512",
+        "xamarin.firebase.ios.analytics.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.iOS.CloudFirestore/1.19.0": {
+      "sha512": "kXHOgYUIoPChCXKGLaKeqznB7audrXsze7VAhcGDPAe50E3p/uzX23vFsQ+UEN9h29TACZpSEJ59TvmmHS7Dlg==",
+      "type": "package",
+      "path": "xamarin.firebase.ios.cloudfirestore/1.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "firebaseioscloudfirestore_128x128.png",
+        "lib/xamarinios10/Firebase.CloudFirestore.dll",
+        "xamarin.firebase.ios.cloudfirestore.1.19.0.nupkg.sha512",
+        "xamarin.firebase.ios.cloudfirestore.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.iOS.Core/6.10.4": {
+      "sha512": "b/cy0xmGUGlT/RxQt2mvlB9lL/tiNRcfsZsWH20lP7FI6H/xABAGAQU0MDKM84KTTOx8NN9CB95eY74NWKGQtw==",
+      "type": "package",
+      "path": "xamarin.firebase.ios.core/6.10.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Xamarin.Firebase.iOS.Core.targets",
+        "buildTransitive/Xamarin.Firebase.iOS.Core.targets",
+        "firebaseioscore_128x128.png",
+        "lib/xamarinios10/Firebase.Core.dll",
+        "xamarin.firebase.ios.core.6.10.4.nupkg.sha512",
+        "xamarin.firebase.ios.core.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.iOS.Database/6.6.0": {
+      "sha512": "vgGBt5gkWIypkuEapFRPzc+Tw2AOVySZFLPGEWsWUX4tvOhvPYCt7/45gUQDdlTJ9M/4c9vie1NfWaXMjx9cRQ==",
+      "type": "package",
+      "path": "xamarin.firebase.ios.database/6.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "firebaseiosdatabase_128x128.png",
+        "lib/xamarinios10/Firebase.Database.dll",
+        "xamarin.firebase.ios.database.6.6.0.nupkg.sha512",
+        "xamarin.firebase.ios.database.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.iOS.Installations/1.7.0": {
+      "sha512": "Mt1LsibddUAGSDlXw2ka3NjK8WQrX0fhUxd953TYHokM6sBokO5gjgI8KRVsoANdO+OLm0o0LqBuApW+ZMSKjg==",
+      "type": "package",
+      "path": "xamarin.firebase.ios.installations/1.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "firebaseiosinstallations_128x128.png",
+        "lib/xamarinios10/Firebase.Installations.dll",
+        "xamarin.firebase.ios.installations.1.7.0.nupkg.sha512",
+        "xamarin.firebase.ios.installations.nuspec"
       ]
     },
     "Xamarin.Forms/5.0.0.2012": {
@@ -1838,6 +2190,10 @@
     "Xamarin.iOS,Version=v1.0": [
       "GuessMyName >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
+      "Xamarin.Firebase.iOS.Analytics >= 6.9.0",
+      "Xamarin.Firebase.iOS.CloudFirestore >= 1.19.0",
+      "Xamarin.Firebase.iOS.Core >= 6.10.4",
+      "Xamarin.Firebase.iOS.Database >= 6.6.0",
       "Xamarin.Forms >= 5.0.0.2012"
     ]
   },
@@ -1880,6 +2236,22 @@
             "target": "Package",
             "version": "[1.6.1, )"
           },
+          "Xamarin.Firebase.iOS.Analytics": {
+            "target": "Package",
+            "version": "[6.9.0, )"
+          },
+          "Xamarin.Firebase.iOS.CloudFirestore": {
+            "target": "Package",
+            "version": "[1.19.0, )"
+          },
+          "Xamarin.Firebase.iOS.Core": {
+            "target": "Package",
+            "version": "[6.10.4, )"
+          },
+          "Xamarin.Firebase.iOS.Database": {
+            "target": "Package",
+            "version": "[6.6.0, )"
+          },
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[5.0.0.2012, )"
@@ -1898,115 +2270,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp.Serialization.JsonNet 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package FireSharp.Serialization.JsonNet 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp.Serialization.JsonNet",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package RestSharp 104.4.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package RestSharp 104.4.0 supports:\n  - net35 (.NETFramework,Version=v3.5)\n  - net35-client (.NETFramework,Version=v3.5,Profile=Client)\n  - net40 (.NETFramework,Version=v4.0)\n  - net40-client (.NETFramework,Version=v4.0,Profile=Client)\n  - sl4 (Silverlight,Version=v4.0)\n  - sl4-wp71 (Silverlight,Version=v4.0,Profile=WindowsPhone71)",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package FireSharp 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp.Serialization.JsonNet 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package FireSharp.Serialization.JsonNet 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp.Serialization.JsonNet",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package RestSharp 104.4.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package RestSharp 104.4.0 supports:\n  - net35 (.NETFramework,Version=v3.5)\n  - net35-client (.NETFramework,Version=v3.5,Profile=Client)\n  - net40 (.NETFramework,Version=v4.0)\n  - net40-client (.NETFramework,Version=v4.0,Profile=Client)\n  - sl4 (Silverlight,Version=v4.0)\n  - sl4-wp71 (Silverlight,Version=v4.0,Profile=WindowsPhone71)",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package FireSharp 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp.Serialization.JsonNet 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package FireSharp.Serialization.JsonNet 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp.Serialization.JsonNet",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package RestSharp 104.4.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package RestSharp 104.4.0 supports:\n  - net35 (.NETFramework,Version=v3.5)\n  - net35-client (.NETFramework,Version=v3.5,Profile=Client)\n  - net40 (.NETFramework,Version=v4.0)\n  - net40-client (.NETFramework,Version=v4.0,Profile=Client)\n  - sl4 (Silverlight,Version=v4.0)\n  - sl4-wp71 (Silverlight,Version=v4.0,Profile=WindowsPhone71)",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package FireSharp 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp.Serialization.JsonNet 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package FireSharp.Serialization.JsonNet 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp.Serialization.JsonNet",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package RestSharp 104.4.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package RestSharp 104.4.0 supports:\n  - net35 (.NETFramework,Version=v3.5)\n  - net35-client (.NETFramework,Version=v3.5,Profile=Client)\n  - net40 (.NETFramework,Version=v4.0)\n  - net40-client (.NETFramework,Version=v4.0,Profile=Client)\n  - sl4 (Silverlight,Version=v4.0)\n  - sl4-wp71 (Silverlight,Version=v4.0,Profile=WindowsPhone71)",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp 1.1.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package FireSharp 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    }
-  ]
+  }
 }

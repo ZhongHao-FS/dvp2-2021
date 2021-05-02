@@ -1,17 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "wOqXCFUDnT64RxqOxxfYmyLRDCrKiqkQCgjajc5UVZMSkQCh7iPji2xIRtWQgi92oFS20F4lr6UV7oL9cpAdlw==",
-  "success": false,
+  "dgSpecHash": "kayp2gzNOkbK93AXOkJG8Si8OLUrRsrFM88AI8OBH9dSDnDQKRrShSwx7/5uiPxys2oIgpjwSBLZGFcakanVLw==",
+  "success": true,
   "projectFilePath": "/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/GuessMyName.Android.csproj",
   "expectedPackageFiles": [
     "/Users/hao/.nuget/packages/firebasedatabase.net/4.0.6/firebasedatabase.net.4.0.6.nupkg.sha512",
-    "/Users/hao/.nuget/packages/firesharp/1.1.0/firesharp.1.1.0.nupkg.sha512",
-    "/Users/hao/.nuget/packages/firesharp.serialization.jsonnet/1.1.0/firesharp.serialization.jsonnet.1.1.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/fody/6.4.0/fody.6.4.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/litedb/4.1.4/litedb.4.1.4.nupkg.sha512",
     "/Users/hao/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/hao/.nuget/packages/propertychanged.fody/3.3.3/propertychanged.fody.3.3.3.nupkg.sha512",
-    "/Users/hao/.nuget/packages/restsharp/104.4.0/restsharp.104.4.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/system.reactive/4.0.0/system.reactive.4.0.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
@@ -61,38 +58,14 @@
     "/Users/hao/.nuget/packages/xamarin.androidx.versionedparcelable/1.1.1.6/xamarin.androidx.versionedparcelable.1.1.1.6.nupkg.sha512",
     "/Users/hao/.nuget/packages/xamarin.androidx.viewpager/1.0.0.6/xamarin.androidx.viewpager.1.0.0.6.nupkg.sha512",
     "/Users/hao/.nuget/packages/xamarin.androidx.viewpager2/1.0.0.8/xamarin.androidx.viewpager2.1.0.0.8.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.build.download/0.10.0/xamarin.build.download.0.10.0.nupkg.sha512",
     "/Users/hao/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
     "/Users/hao/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512",
     "/Users/hao/.nuget/packages/xamarin.google.android.material/1.2.1.1/xamarin.google.android.material.1.2.1.1.nupkg.sha512",
-    "/Users/hao/.nuget/packages/xamarin.google.guava.listenablefuture/1.0.0.2/xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
+    "/Users/hao/.nuget/packages/xamarin.google.guava.listenablefuture/1.0.0.2/xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.googleplayservices.base/117.6.0/xamarin.googleplayservices.base.117.6.0.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.googleplayservices.basement/117.6.0/xamarin.googleplayservices.basement.117.6.0.nupkg.sha512",
+    "/Users/hao/.nuget/packages/xamarin.googleplayservices.tasks/117.2.1/xamarin.googleplayservices.tasks.117.2.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp.Serialization.JsonNet 1.1.0 is not compatible with monoandroid11.0 (MonoAndroid,Version=v11.0). Package FireSharp.Serialization.JsonNet 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp.Serialization.JsonNet",
-      "targetGraphs": [
-        "MonoAndroid,Version=v11.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package RestSharp 104.4.0 is not compatible with monoandroid11.0 (MonoAndroid,Version=v11.0). Package RestSharp 104.4.0 supports:\n  - net35 (.NETFramework,Version=v3.5)\n  - net35-client (.NETFramework,Version=v3.5,Profile=Client)\n  - net40 (.NETFramework,Version=v4.0)\n  - net40-client (.NETFramework,Version=v4.0,Profile=Client)\n  - sl4 (Silverlight,Version=v4.0)\n  - sl4-wp71 (Silverlight,Version=v4.0,Profile=WindowsPhone71)",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "MonoAndroid,Version=v11.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package FireSharp 1.1.0 is not compatible with monoandroid11.0 (MonoAndroid,Version=v11.0). Package FireSharp 1.1.0 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "FireSharp",
-      "targetGraphs": [
-        "MonoAndroid,Version=v11.0"
-      ]
-    }
-  ]
+  "logs": []
 }

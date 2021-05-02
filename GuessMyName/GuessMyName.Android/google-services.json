@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "643600171426",
+    "project_id": "guesswho-5ac31",
+    "storage_bucket": "guesswho-5ac31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643600171426:android:0432fe8088aff98f47f2fb",
+        "android_client_info": {
+          "package_name": "com.fullsail.guessmyname"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643600171426-f7kb3722a7dcq50flp81ari3hsj21ulo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwhdjXZv8H3wxZKl6glczQ5nTkNWmmlbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643600171426-f7kb3722a7dcq50flp81ari3hsj21ulo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

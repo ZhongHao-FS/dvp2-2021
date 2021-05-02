@@ -9,6 +9,9 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="12" CornerRadius="0">
+            <Label x:Name="headerLabel" Text="" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+        </Frame>
         <Grid RowSpacing="0" 
            ColumnSpacing="0">
             <Grid.RowDefinitions>
@@ -16,11 +19,13 @@
                 <RowDefinition Height="1" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <ListView x:Name="listView" Grid.Row="0" ItemTemplate="{StaticResource MessageTemplateSelector}" 
+            <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
+                <ListView x:Name="listView" ItemTemplate="{StaticResource MessageTemplateSelector}" 
                  ItemsSource="{Binding Messages}" Margin="0" HasUnevenRows="True"
                  VerticalOptions="FillAndExpand" SeparatorColor="Transparent" FlowDirection="RightToLeft"
                  Rotation="180" >
-            </ListView>
+                </ListView>
+            </ScrollView>
             <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="LightGray"
                  Grid.Row="1"/>
             <local:ChatInputBarView x:Name="chatInput" Grid.Row="2" Margin="0,0,10,0"/>

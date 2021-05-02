@@ -15,7 +15,7 @@ namespace GuessMyName
         FirebaseHelper _firebase = new FirebaseHelper();
 
         // Property
-        public static LoginViewModel Me { get; set; }
+        public static LoginViewModel Me { get; set; } = new LoginViewModel();
 
         public MainPage(LoginViewModel vm)
         {
@@ -43,10 +43,17 @@ namespace GuessMyName
             switchButton.Clicked += SwitchButton_Clicked;
         }
 
-        private void SwitchButton_Clicked(object sender, EventArgs e)
+        async void SwitchButton_Clicked(object sender, EventArgs e)
         {
             promptLabel.Text = "Please enter a person's name for Player1 to guess";
             switchButton.Text = "New Game";
+
+            if(! await _firebase.FindOpenGame(Me))
+            {
+                await DisplayAlert("Oops", "Currently there is no game to join!", "Back to Create New Game");
+                SwitchBack_Clicked(sender, e);
+            }
+
             confirmButton.Clicked += JoinButton_Clicked;
             switchButton.Clicked += SwitchBack_Clicked;
         }

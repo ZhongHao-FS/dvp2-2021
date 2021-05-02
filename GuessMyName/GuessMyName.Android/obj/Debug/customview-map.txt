@@ -30,6 +30,7 @@ FrameLayout;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.A
 item;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/values/styles.xml
 LinearLayout;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/layout/bottomtablayout.xml
 paths;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/44/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
+resources;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/googsvcsjson/values/goog_svcs_json.xml
 resources;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/values/attrs.xml
 resources;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/values/strings.xml
 resources;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/values/styles.xml
@@ -39,6 +40,7 @@ set;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/o
 set;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/anim/enterfromright.xml
 set;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/anim/exittoleft.xml
 set;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/anim/exittoright.xml
+string;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/googsvcsjson/values/goog_svcs_json.xml
 string;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/values/strings.xml
 style;/Users/hao/Desktop/FullSail/DVP2/dvp2-2021/GuessMyName/GuessMyName.Android/obj/Debug/lp/45/jl/res/values/styles.xml
 style;obj/Debug/res/values/styles.xml

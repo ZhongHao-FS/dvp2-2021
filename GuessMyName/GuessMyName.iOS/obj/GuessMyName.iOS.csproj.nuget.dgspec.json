@@ -40,6 +40,22 @@
               "target": "Package",
               "version": "[1.6.1, )"
             },
+            "Xamarin.Firebase.iOS.Analytics": {
+              "target": "Package",
+              "version": "[6.9.0, )"
+            },
+            "Xamarin.Firebase.iOS.CloudFirestore": {
+              "target": "Package",
+              "version": "[1.19.0, )"
+            },
+            "Xamarin.Firebase.iOS.Core": {
+              "target": "Package",
+              "version": "[6.10.4, )"
+            },
+            "Xamarin.Firebase.iOS.Database": {
+              "target": "Package",
+              "version": "[6.6.0, )"
+            },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2012, )"
@@ -93,10 +109,6 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "FireSharp.Serialization.JsonNet": {
-              "target": "Package",
-              "version": "[1.1.0, )"
-            },
             "FirebaseDatabase.net": {
               "target": "Package",
               "version": "[4.0.6, )"
