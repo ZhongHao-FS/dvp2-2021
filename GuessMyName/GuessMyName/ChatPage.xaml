@@ -12,26 +12,32 @@
         <Frame BackgroundColor="#2196F3" Padding="12" CornerRadius="0">
             <Label x:Name="headerLabel" Text="" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
         </Frame>
-        <Grid RowSpacing="0" 
-           ColumnSpacing="0">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <Grid RowSpacing="0" ColumnSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="1" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
                 <ListView x:Name="listView" ItemTemplate="{StaticResource MessageTemplateSelector}" 
                  ItemsSource="{Binding Messages}" Margin="0" HasUnevenRows="True"
                  VerticalOptions="FillAndExpand" SeparatorColor="Transparent" FlowDirection="RightToLeft"
                  Rotation="180" >
                 </ListView>
-            </ScrollView>
-            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="LightGray"
+                <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="LightGray"
                  Grid.Row="1"/>
-            <local:ChatInputBarView x:Name="chatInput" Grid.Row="2" Margin="0,0,10,0"/>
-        </Grid>
-        <Button x:Name="searchButton" Text="" />
-        <Label x:Name="resultLabel" Text="" Margin="20" TextColor="#000000" FontSize="Small"
-               LineHeight="2" />
+                <Frame BackgroundColor="#C1D5AA" Padding="4" Grid.Row="2" HorizontalOptions="FillAndExpand"
+                   VerticalOptions="EndAndExpand">
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <local:ChatInputBarView x:Name="chatInput" Margin="0,0,10,0"
+                                                HorizontalOptions="FillAndExpand"/>
+                        <Button x:Name="searchButton" Text="" BackgroundColor="#83B459"
+                                TextColor="#FFFFFF" />
+                        <Label x:Name="resultLabel" Text="" Margin="12" TextColor="#000000"
+                               FontSize="Small" LineHeight="2" IsVisible="False" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </ScrollView>
     </StackLayout>
 </ContentPage>

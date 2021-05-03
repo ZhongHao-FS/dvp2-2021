@@ -72,11 +72,14 @@ namespace GuessMyName.Models
         {
             var gameToJoin = (await _firebase.Child("ChatViewModel").OnceAsync<ChatViewModel>())
                 .Where(a => string.IsNullOrEmpty(a.Object.Answer1) && a.Object.Player1 != player2).FirstOrDefault();
-
+            
             gameToJoin.Object.Answer1 = answer1;
             gameToJoin.Object.Player2 = player2;
 
-            await _firebase.Child("ChatViewModel").Child(gameToJoin.Key).PutAsync(gameToJoin);
+            string key = (await _firebase.Child("ChatViewModel").OnceAsync<ChatViewModel>())
+                .Where(a => string.IsNullOrEmpty(a.Object.Answer1) && a.Object.Player1 != player2).FirstOrDefault().Key;
+
+            await _firebase.Child("ChatViewModel").Child(key).PutAsync(gameToJoin);
         }
 
         public async Task<ChatViewModel> LoadGame()
@@ -114,7 +117,10 @@ namespace GuessMyName.Models
 
             gameToSend.Object.Messages.Add(new MessageModel() { Text = text, Sender = MainPage.Me.UserName, Time = DateTime.Now });
 
-            await _firebase.Child("ChatViewModel").Child(gameToSend.Key).PutAsync(gameToSend);
+            string key = (await _firebase.Child("ChatViewModel").OnceAsync<ChatViewModel>())
+                .Where(a => a.Object.Player1 == MainPage.Me || a.Object.Player2 == MainPage.Me).FirstOrDefault().Key;
+
+            await _firebase.Child("ChatViewModel").Child(key).Child("Messages").PutAsync(gameToSend.Object.Messages);
         }
 
         public async Task<ChatViewModel> ListenNewMessage(ChatViewModel chat)
@@ -129,6 +135,13 @@ namespace GuessMyName.Models
             }
 
             return gameToListen.Object;
+        }
+
+        public async Task DeleteGame(ChatViewModel game)
+        {
+            string key = (await _firebase.Child("ChatViewModel").OnceAsync<ChatViewModel>())
+                .Where(a => a.Object == game).FirstOrDefault().Key;
+            await _firebase.Child("ChatViewModel").Child(key).DeleteAsync();
         }
     }
 }

@@ -52,6 +52,7 @@ namespace GuessMyName
             {
                 await DisplayAlert("Oops", "Currently there is no game to join!", "Back to Create New Game");
                 SwitchBack_Clicked(sender, e);
+                return;
             }
 
             confirmButton.Clicked += JoinButton_Clicked;
@@ -69,15 +70,15 @@ namespace GuessMyName
         async void ConfirmButton_Clicked(object sender, EventArgs e)
         {
             await _firebase.NewGame(Me, nameEntry.Text);
-
-            await Navigation.PushAsync(new ChatPage(nameEntry.Text));
+            ChatViewModel newGame = new ChatViewModel() { Player1 = Me, Answer2 = nameEntry.Text };
+            await Navigation.PushAsync(new ChatPage(newGame, nameEntry.Text));
         }
 
         async void JoinButton_Clicked(object sender, EventArgs e)
         {
             await _firebase.JoinGame(Me, nameEntry.Text);
-
-            await Navigation.PushAsync(new ChatPage(nameEntry.Text));
+            ChatViewModel joinGame = new ChatViewModel() { Player2 = Me, Answer1 = nameEntry.Text };
+            await Navigation.PushAsync(new ChatPage(joinGame, nameEntry.Text));
         }
 
         private void SignOutCommand()

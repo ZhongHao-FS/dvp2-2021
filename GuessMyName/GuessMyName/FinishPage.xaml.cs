@@ -37,6 +37,7 @@ namespace GuessMyName
 
         private void LogoutButton_Clicked(object sender, EventArgs e)
         {
+            MainPage.Me = null;
             Navigation.PopToRootAsync();
         }
 

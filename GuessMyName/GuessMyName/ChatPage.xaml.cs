@@ -18,22 +18,41 @@ namespace GuessMyName
         // Property
         public static ChatViewModel ChatLog { get; set; } = new ChatViewModel();
 
-        public ChatPage(string answerKey)
+        public ChatPage(ChatViewModel game, string answerKey)
         {
             InitializeComponent();
 
-            headerLabel.Text = ChatLog.Player1.UserName + "'s Turn";
+            ChatLog = game;
+            headerLabel.Text = game.Player1.UserName + "'s Turn";
             _opponentsAnswer = answerKey;
             listView.ItemTapped += ListView_ItemTapped;
             searchButton.Text = $"Search {_opponentsAnswer} on Wikipedia";
             searchButton.Clicked += SearchButton_Clicked;
 
+            if (MainPage.Me != game.Player1)
+            {
+                NotMyTurn();
+            }
+            else if (game.Answer1 == string.Empty || game.Player2 == null)
+            {
+                WaitForPlayer(ChatLog);
+            }
+
             MessagingCenter.Subscribe<LoginViewModel, string>(this, "Correct Guess!", (sender, args) => {
-                Navigation.PushModalAsync(new FinishPage(sender.UserName, args));
+                GameOver(sender.UserName, args);
             });
 
             MessagingCenter.Subscribe<string>(this, "Listen to new messages", (sender) => {
-                this.BindingContext = _firebase.ListenNewMessage(ChatLog);
+                if(ChatLog.Player1 == MainPage.Me)
+                {
+                    headerLabel.Text = ChatLog.Player2.UserName + "'s Turn";
+                }
+                else
+                {
+                    headerLabel.Text = ChatLog.Player1.UserName + "'s Turn";
+                }
+
+                NotMyTurn();
             });
         }
 
@@ -46,6 +65,50 @@ namespace GuessMyName
         {
             WikiAPI wiki = new WikiAPI(_opponentsAnswer);
             resultLabel.Text = await wiki.GetIntro();
+            resultLabel.IsVisible = true;
+            searchButton.IsVisible = false;
+        }
+
+        async void WaitForPlayer(ChatViewModel openGame)
+        {
+            ChatLog = await _firebase.ListenNewPlayer(openGame);
+        }
+
+        async void GameOver(string winner, string answer)
+        {
+            await _firebase.DeleteGame(ChatLog);
+            _opponentsAnswer = string.Empty;
+            ChatLog = null;
+            await Navigation.PushModalAsync(new FinishPage(winner, answer));
+        }
+
+        async void NotMyTurn()
+        {
+            MessagingCenter.Send<string>("Not my turn", "My opponent's turn");
+
+            ChatLog.Messages.CollectionChanged += Messages_CollectionChanged;
+            ChatLog = await _firebase.ListenNewMessage(ChatLog);
+            this.BindingContext = ChatLog;
+        }
+
+        private void Messages_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (ChatLog.Messages[0].Text.Contains(ChatLog.Answer1))
+            {
+                GameOver(ChatLog.Player1.UserName, ChatLog.Answer1);
+                return;
+            }
+            if (ChatLog.Messages[0].Text.Contains(ChatLog.Answer2))
+            {
+                GameOver(ChatLog.Player2.UserName, ChatLog.Answer2);
+                return;
+            }
+
+            if (ChatLog.Messages[0].Sender != MainPage.Me.UserName)
+            {
+                MessagingCenter.Send<string>("My turn", "Show chat buttons");
+                headerLabel.Text = MainPage.Me.UserName + "'s Turn";
+            }
         }
 
         protected async override void OnAppearing()
@@ -54,11 +117,6 @@ namespace GuessMyName
 
             ChatLog = await _firebase.LoadGame();
             this.BindingContext = ChatLog;
-
-            if(ChatLog.Answer1 == string.Empty || ChatLog.Player2 == null)
-            {
-                ChatLog = await _firebase.ListenNewPlayer(ChatLog);
-            }
         }
     }
 }
